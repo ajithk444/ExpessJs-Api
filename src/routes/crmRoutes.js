@@ -2,7 +2,7 @@ import {
     addNewContact,
     getContacts,
     getContactById,
-    updateContact,
+    updateContact   ,
     deleteContactById
 } from '../controllers/crmController';
 
@@ -39,6 +39,7 @@ const routes = (app) => {
     app.route('/project')
         //GET endpoint
         .get(getProjects)
+        
         //POST endpoint
         .post(addNewProject);
 }
