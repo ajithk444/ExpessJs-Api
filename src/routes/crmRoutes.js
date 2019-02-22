@@ -6,6 +6,9 @@ import {
     deleteContactById
 } from '../controllers/crmController';
 
+import {
+    addNewProject
+} from '../controllers/projectController';
 
 const routes = (app) => {
     app.route('/contact')
@@ -31,6 +34,11 @@ const routes = (app) => {
 
         //DELETE method
         .delete(deleteContactById);
+
+    app.route('/project')
+
+        //POST endpoint
+        .post(addNewProject);
 }
 
 export default routes;

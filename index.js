@@ -1,5 +1,6 @@
 import express from 'express';
 import routes from './src/routes/crmRoutes';
+
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
@@ -18,6 +19,9 @@ app.use(bodyParser.json());
 
 
 routes(app);
+
+app.use(express.static('public/images'));
+
 app.get('/', (req, res) =>
     res.send(`Node and express server is running on port ${PORT}`)
 );
