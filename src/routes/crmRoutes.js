@@ -7,7 +7,8 @@ import {
 } from '../controllers/crmController';
 
 import {
-    addNewProject
+    addNewProject,
+    getProjects
 } from '../controllers/projectController';
 
 const routes = (app) => {
@@ -36,7 +37,8 @@ const routes = (app) => {
         .delete(deleteContactById);
 
     app.route('/project')
-
+        //GET endpoint
+        .get(getProjects)
         //POST endpoint
         .post(addNewProject);
 }

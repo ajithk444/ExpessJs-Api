@@ -13,3 +13,13 @@ export const addNewProject = (req, res) => {
         res.json(project);
     });
 };
+
+
+export const getProjects = (req, res) => {
+    Project.find({}, (err, project) => {
+        if (err) {
+            res.send(err);
+        }
+        res.json(project);
+    });
+};
